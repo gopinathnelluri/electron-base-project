@@ -1,0 +1,46 @@
+.navside{
+	max-width:250px;
+	width:250px;
+	float:left;
+	background-image: url("../bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.navsidebar{
+	position:relative;
+	left:-40px;
+	color:white;
+	font-size: 16px;
+
+}
+.maincontent{
+	max-width:550px;
+	width:550px;
+	float:left;
+	background-image: url("../bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.maincontent,section {
+	-ms-overflow-style: scrollbar;
+	-webkit-app-region:drag;
+}
+
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+button,
+textarea {
+  -webkit-app-region: no-drag;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-user-select: none;
+}
+
+

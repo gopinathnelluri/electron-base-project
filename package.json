@@ -1,0 +1,26 @@
+{
+  "name": "nomining",
+  "version": "1.0.0",
+  "description": "No Background Mining",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "mining",
+    "monero",
+    "crypto-currency",
+    "nomining",
+    "block"
+  ],
+  "author": "SriHarrsha, Gopinath",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "1.7.8"
+  },
+  "dependencies": {
+    "electron-reload": "^1.2.2",
+    "hostile": "^1.3.0"
+  }
+}
