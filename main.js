@@ -21,7 +21,7 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({titleBarStyle: 'hidden',
+  mainWindow = new BrowserWindow({//titleBarStyle: 'hidden',
      width: 800,
      height: 600,
      resizable: false,
@@ -45,6 +45,8 @@ function createWindow () {
 
   }))
 
+ 
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
@@ -56,6 +58,8 @@ function createWindow () {
     mainWindow = null
   })
 }
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -77,6 +81,7 @@ app.on('activate', function () {
   if (mainWindow === null) {
     createWindow()
   }
+
 })
 
 

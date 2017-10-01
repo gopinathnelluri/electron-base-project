@@ -70,3 +70,64 @@ function onRadioClick(){
   
 }
 
+var currentWindow=1;
+
+function displayContent(n){
+    if(n == 1){
+      currentWindow = 1;
+      document.getElementById("displayContent2").style.display = "none";
+      document.getElementById("displayContent3").style.display = "none";
+      document.getElementById("displayContent1").style.display = "block";
+    } else if(n == 2){
+      currentWindow = 2;
+      document.getElementById("displayContent3").style.display = "none";
+      document.getElementById("displayContent1").style.display = "none";
+      document.getElementById("displayContent2").style.display = "block";
+    }  else if(n == 3){
+      currentWindow = 3;
+      document.getElementById("displayContent2").style.display = "none";
+      document.getElementById("displayContent1").style.display = "none";
+      document.getElementById("displayContent3").style.display = "block";
+    }  
+
+  }
+
+const { remote } = require('electron')
+
+function closeapp(){
+  
+  remote.BrowserWindow.getFocusedWindow().close();
+}
+
+
+function minimizeapp(){
+  remote.BrowserWindow.getFocusedWindow().minimize();
+  setTimeout(check, 1000); 
+}
+
+function check(){
+  document.getElementById("minapp").classList.remove("nav__item--current");
+  if(currentWindow == 2){
+    document.getElementById("btn22").classList.add("nav__item--current");
+    document.getElementById("btn11").classList.remove("nav__item--current");
+    document.getElementById("btn33").classList.remove("nav__item--current");
+    document.getElementById("btn2").click();
+  } else if(currentWindow == 3){
+    document.getElementById("btn33").classList.add("nav__item--current");
+    document.getElementById("btn11").classList.remove("nav__item--current");
+    document.getElementById("btn22").classList.remove("nav__item--current");
+    document.getElementById("btn3").click();
+  } else {
+    document.getElementById("btn11").classList.add("nav__item--current");
+    document.getElementById("btn22").classList.remove("nav__item--current");
+    document.getElementById("btn33").classList.remove("nav__item--current");
+    document.getElementById("btn1").click();
+  }
+}
+
+  
+
+
+  
+
+ 

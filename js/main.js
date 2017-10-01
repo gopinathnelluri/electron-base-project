@@ -51,20 +51,3 @@
 	
 
 })(window);
-
-function displayContent(n){
-		if(n == 1){
-			document.getElementById("displayContent2").style.display = "none";
-			document.getElementById("displayContent3").style.display = "none";
-			document.getElementById("displayContent1").style.display = "block";
-		} else if(n == 2){
-			document.getElementById("displayContent3").style.display = "none";
-			document.getElementById("displayContent1").style.display = "none";
-			document.getElementById("displayContent2").style.display = "block";
-		}  else if(n == 3){
-			document.getElementById("displayContent2").style.display = "none";
-			document.getElementById("displayContent1").style.display = "none";
-			document.getElementById("displayContent3").style.display = "block";
-		}  
-
-	}

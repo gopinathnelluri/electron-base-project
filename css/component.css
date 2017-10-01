@@ -535,6 +535,19 @@
     transition: opacity 0.3s;
 }
 
+ .nav--etefu .nav__item-inner1 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 0.25em;
+	height: 100%;
+	margin: 0 0 0 1em;
+	background: #4fc369;
+	opacity: 0.7;
+	-webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
 .nav--etefu .nav__item:not(.nav__item--current):focus .nav__item-inner,
 .nav--etefu .nav__item:not(.nav__item--current):hover .nav__item-inner{
 	opacity: 1;
@@ -556,7 +569,28 @@
 	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
 }
 
+.nav--etefu .nav__item-inner1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #326b3f;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+}
+
 .nav--etefu .nav__item--current .nav__item-inner::before {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.nav--etefu .nav__item--current .nav__item-inner1::before {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
@@ -1114,6 +1148,22 @@
 }
 
 .nav--kafa .nav__item-inner {
+	display: block;
+	overflow: hidden;
+	width: 2.85em;
+	height: 2.85em;
+	opacity: 0.6;
+	border-radius: 50%;
+	background: #ffffff;
+	-webkit-transform: scale3d(0.65,0.65,1);
+	transform: scale3d(0.65,0.65,1);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.3s;
+	transition: transform 0.5s, opacity 0.3s;
+	-webkit-animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+	animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+}
+
+.nav--kafa .nav__item-inner1 {
 	display: block;
 	overflow: hidden;
 	width: 2.85em;
