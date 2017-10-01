@@ -44,3 +44,338 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
+
+
+/* Card CSS*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+   font-family: "Lato", sans-serif;
+}
+
+.price h1 {
+  font-weight: 180;
+  color: #18C2C0;
+  letter-spacing: 1px;
+}
+
+.card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 400px;
+  height: 360px;
+  font-size: 0.9rem!important;
+}
+.card .row {
+  height: 12%;
+  width: 80%;
+  border-bottom: 1.2px solid #292C58;
+}
+.card .row:last-child {
+  border: none;
+}
+.card .paypal {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card .details {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.card .paypal, .card .credit {
+  background-color: #1E2148;
+}
+.card .cardholder, .card .number, .card .details {
+  background-color: #242852;
+}
+
+.paypal .left, .paypal .right, .credit .left, .credit .right {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.paypal .left, .credit .left {
+  float: left;
+  margin-left: 25px;
+  padding-left:25px;
+}
+.paypal .left label, .credit .left label {
+  margin-left: 0px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.paypal .left input[type=radio], .credit .left input[type=radio] {
+  visibility: hidden;
+}
+.paypal .left .radio, .credit .left .radio {
+  position: absolute;
+  top: -2px;
+  left: -14px;
+  border: 3px solid #414365;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #292B52;
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.paypal .left .radio::before, .credit .left .radio::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  top: 2.5px;
+  left: 2.5px;
+  width: 9px;
+  height: 9px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.paypal .right, .credit .right {
+  float: right;
+  margin-right: 30px;
+}
+.paypal .right img, .credit .right img {
+  width: 28px;
+  height: 20px;
+  margin-left: 0px;
+}
+
+input[type=radio]:checked ~ .radio {
+  border: 3px solid #90E1E3;
+  background-color: #18C2C0;
+}
+input[type=radio]:checked ~ .radio::before {
+  background-color: #fff;
+}
+
+.cardholder .info, .number .info {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 32px;
+}
+.cardholder .info label, .number .info label {
+  display: inline-block;
+  /*letter-spacing: 1px;*/
+  color: #8F92C3;
+  /*width: 100px;*/
+}
+.cardholder .info input, .number .info input {
+  display: inline-block;
+  max-width: 200px;
+  width: 200px;
+  background-color: transparent;
+  font-family: "Source Code Pro";
+  border: none;
+  outline: none;
+  margin-left: 50px;
+  color: white;
+}
+.cardholder .info input::-webkit-input-placeholder, .number .info input::-webkit-input-placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.cardholder .info input::-moz-placeholder, .number .info input::-moz-placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.cardholder .info input:-ms-input-placeholder, .number .info input:-ms-input-placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.cardholder .info input::placeholder, .number .info input::placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+
+#cardnumber, #cardnumber::-webkit-input-placeholder {
+  letter-spacing: 2px;
+}
+
+#cardnumber, #cardnumber::-moz-placeholder {
+  letter-spacing: 2px;
+}
+
+#cardnumber, #cardnumber:-ms-input-placeholder {
+  letter-spacing: 2px;
+}
+
+#cardnumber, #cardnumber::placeholder {
+  letter-spacing: 2px;
+}
+
+.details .left, .details .right {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.details .left {
+  float: left;
+  padding-left: 32px;
+  width: 40%;
+}
+.details .left label {
+  letter-spacing: 0px;
+  color: #8F92C3;
+  width: 100px;
+  /*margin-right: 20px;*/
+  float:left;
+}
+.details .left select {
+  font-family: "Source Code Pro";
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #444880;
+}
+.details .left span {
+  font-family: "Source Code Pro";
+  color: #444880;
+  margin: 0 2px;
+}
+.details .right {
+  float: right;
+  width: 50%;
+  padding-left: 60px;
+}
+.details .right label {
+  /*margin-right: 20px;*/
+  color: #8F92C3;
+}
+.details .right input {
+  text-align: center;
+  width: 100px;
+  font-family: "Source Code Pro";
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  float: left;
+}
+.details .right input::-webkit-input-placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.details .right input::-moz-placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.details .right input:-ms-input-placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.details .right input::placeholder {
+  font-family: "Source Code Pro";
+  color: #444880;
+}
+.details .right span {
+  text-align: center;
+  display: inline-block;
+  font-family: "Source Code Pro";
+  cursor: pointer;
+  /*margin-left: 50px;*/
+  color: #18C2C0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #18C2C0;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.button button {
+  margin-top:20px;
+  font-size: 1.2rem;
+  font-weight: 22;
+  letter-spacing: 1px;
+  width: 320px;
+  background-color: #244874;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button button:hover {
+  background-color: #171A3D;
+}
+.button button:active {
+  background-color: #8F92C3;
+}
+.button button i {
+  font-size: 1.2rem;
+  margin-right: 0px;
+}
+
+
+
+
+
+
+.card__container {
+     overflow: hidden;
+}
+
+/* setting card*/
+
+.pmnt{
+	position: relative;
+	margin-left: 80px;
+	height: 440px;
+	top:100px;
+}
+
+
+.amount{
+  position: relative;
+  width: 320px;
+  background-color: #244874;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  margin-left: -80px;
+  height: 100px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+}

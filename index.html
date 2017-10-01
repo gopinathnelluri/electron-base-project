@@ -1,54 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>No Mining</title>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>No Mining</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/kazzkiq/balloon.css/master/balloon.min.css" />
 
-</head>
-<style>
-
-
-</style>
-
-<body style="user-select:none">
-
-	<main>
+	</head>
+	<style>
 
 
-		<section class="navside section">
-			<div class="navsidebar">
-				<nav class="nav nav--kafa">
-					<button class="nav__item nav__item--current" onclick="displayContent(1);" aria-label="Item 1"><span class="nav__item-inner"><img class="nav__item-img" src="img/11.png" alt="No Mining" /></span><span class="nav__item-title">No Mining</span></button>
+	</style>
 
-					<button class="nav__item" onclick="displayContent(2);" aria-label="Item 2"><span class="nav__item-inner"><img class="nav__item-img" src="img/avatar-1.svg" alt="About Us" /></span><span class="nav__item-title">About Us</span></button>
-					
-					<button class="nav__item" onclick="displayContent(3);" aria-label="Item 3"><span class="nav__item-inner"><img class="nav__item-img" src="img/33.png" alt="Donate" /></span><span class="nav__item-title">Donate</span></button>
-						<!--
-						<button class="nav__item" aria-label="Item 4"><span class="nav__item-inner"><img class="nav__item-img" src="img/avatar-4.svg" alt="Avatar 4" /></span><span class="nav__item-title">Walter Freeman</span></button>
+	<body style="user-select:none">
 
-						<button class="nav__item" aria-label="Item 5"><span class="nav__item-inner"><img class="nav__item-img" src="img/avatar-5.svg" alt="Avatar 5" /></span><span class="nav__item-title">Andy Knight</span></button>
-					-->
-				</nav>
+		<main>
+
+
+			<section class="navside section">
+				<div class="navsidebar">
+					<nav class="nav nav--kafa">
+						<button class="nav__item nav__item--current" onclick="displayContent(1);" aria-label="Item 1"><span class="nav__item-inner"><img class="nav__item-img" src="img/11.png" alt="No Mining" /></span><span class="nav__item-title">No Mining</span></button>
+
+						<button class="nav__item" onclick="displayContent(2);" aria-label="Item 2"><span class="nav__item-inner"><img class="nav__item-img" src="img/avatar-1.svg" alt="About Us" /></span><span class="nav__item-title">About Us</span></button>
+
+						<button class="nav__item" onclick="displayContent(3);" aria-label="Item 3"><span class="nav__item-inner"><img class="nav__item-img" src="img/33.png" alt="Donate" /></span><span class="nav__item-title">Donate</span></button>
+							<!--
+							<button class="nav__item" aria-label="Item 4"><span class="nav__item-inner"><img class="nav__item-img" src="img/avatar-4.svg" alt="Avatar 4" /></span><span class="nav__item-title">Walter Freeman</span></button>
+
+							<button class="nav__item" aria-label="Item 5"><span class="nav__item-inner"><img class="nav__item-img" src="img/avatar-5.svg" alt="Avatar 5" /></span><span class="nav__item-title">Andy Knight</span></button>
+						-->
+					</nav>
+				</div>
+			</section>
+
+			<div class="maincontent" id="displayContent1"  >
+				No Mining
 			</div>
-		</section>
+			<div class="maincontent" id="displayContent2" style="display:none;">
+				About Us
+			</div>
+			<div class="maincontent" id="displayContent3" style="display:none;">
+				
 
-		<div class="maincontent" id="displayContent1" >
-			No Mining
-		</div>
-		<div class="maincontent" id="displayContent2" style="display:none;">
-			About Us
-		</div>
-		<div class="maincontent" id="displayContent3" style="display:none;">
-			Donate
-		</div>
-	</main>
 
-	<script src="js/main.js"></script>
-</body>
-</html>
+
+				<div class="pmnt container">
+					<!--
+				    <div class="price">
+				        <h1>Awesome, that's $99.99 !</h1>
+				    </div>
+					-->
+					<div >
+					    <input class="amount" type="text" placeholder="$0.00">
+					</div>
+				    <div class="card__container">
+				        <div class="card">
+				            <div class="row paypal">
+				                <div class="left">
+				                    <input id="pp" type="radio" onclick="onRadioClick();" value="pp" name="payment" />
+				                    <div class="radio"  onclick='document.getElementById("paypalclick").click();'></div>
+				                    <label id="paypalclick" style="margin-left:-25px;" for="pp">Paypal</label>
+				                </div>
+				                <div class="right">
+				                    <img src="http://i68.tinypic.com/2rwoj6s.png" alt="paypal" />
+				                </div>
+				            </div>
+				            <div id="cd0" class="row credit">
+				                <div class="left">
+				                    <input id="cd" onclick="onRadioClick();" type="radio"  value="cd" name="payment" />  
+				                    <div class="radio" onclick='document.getElementById("cardclick").click();'></div>
+				                    <label id="cardclick" style="margin-left:-25px;" for="cd">Debit/Credit</label>
+				                </div>
+				                <div class="right">
+				                    <img src="http://i66.tinypic.com/5knfq8.png" alt="visa" />
+				                    <img src="http://i67.tinypic.com/14y4p1.png" alt="mastercard" />
+				                    <img src="http://i63.tinypic.com/1572ot1.png" alt="amex" />
+				                    <img src="http://i64.tinypic.com/2i92k4p.png" alt="maestro" />
+				                </div>
+				            </div>
+				          
+				            <div id="cd1" class="row cardholder">
+				                <div class="info">
+				                    <label for="cardholdername">Name</label>
+				                    <input placeholder="First Lastname" id="cardholdername" type="text" />
+				                </div>
+				            </div>
+				            <div id="cd2" class="row number">
+				                <div class="info">
+				                    <label for="cardnumber">Card number</label>
+				                    <input id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19" placeholder="8888-8888-8888-8888"/>
+				                </div>
+				            </div>
+					        <div id="cd3" class="row details">
+				                <div class="left">
+				                    <label for="expiry-date">Expiry</label>
+				                    <select id="expiry-date">
+				                        <option>MM</option>
+				                        <option value="1">01</option>
+				                        <option value="2">02</option>
+				                        <option value="3">03</option>
+				                        <option value="4">04</option>
+				                        <option value="5">05</option>
+				                        <option value="6">06</option>
+				                        <option value="7">07</option>
+				                        <option value="8">08</option>
+				                        <option value="9">10</option>
+				                        <option value="11">11</option>
+				                        <option value="12">12</option>
+				                    </select>
+				                    <span>/</span>
+				                     <select id="expiry-date">
+				                        <option>YYYY</option>
+				                        <option value="2016">2016</option>
+				                        <option value="2017">2017</option>
+				                        <option value="2018">2018</option>
+				                        <option value="2019">2019</option>
+				                        <option value="2020">2020</option>
+				                        <option value="2021">2021</option>
+				                        <option value="2022">2022</option>
+				                        <option value="2023">2023</option>
+				                        <option value="2024">2024</option>
+				                        <option value="2025">2025</option>
+				                        <option value="2026">2026</option>
+				                        <option value="2027">2027</option>
+				                        <option value="2028">2028</option>
+				                        <option value="2029">2029</option>
+				                        <option value="2030">2030</option>
+				                    </select>
+				                </div>
+				                <div class="right">
+				                    <label for="cvv">CVC/CVV</label>
+				                    <input type="text" maxlength="4" placeholder="123"/>
+				                    <span data-balloon-length="medium" data-balloon="The 3 or 4-digit number on the back of your card." data-balloon-pos="up">i</span>
+				                </div>
+				              
+
+				            </div>
+				        <div class="button">
+					        <button type="submit"><i class="ion-locked"></i>Donate Now</button>
+					    </div>
+				        </div>
+
+				    </div>
+
+				    
+				</div>
+
+
+
+			</div>
+		</main>
+
+		<script src="js/main.js"></script>
+		<script src="renderer.js"></script>
+	</body>
+	</html>

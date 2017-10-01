@@ -50,3 +50,23 @@ function run(){
     protect();
 }
 
+document.getElementById("cd1").style.display = "none";
+document.getElementById("cd2").style.display = "none";
+document.getElementById("cd3").style.display = "none";
+document.getElementById("cd0").style= "border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;";
+
+function onRadioClick(){
+  if(document.querySelector('input[name="payment"]:checked').value == "pp"){
+      document.getElementById("cd1").style.display = "none";
+      document.getElementById("cd2").style.display = "none";
+      document.getElementById("cd3").style.display = "none";
+      document.getElementById("cd0").style= "border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;";
+  } else {
+      document.getElementById("cd1").style.display = "block";
+      document.getElementById("cd2").style.display = "block";
+      document.getElementById("cd3").style.display = "block";
+      document.getElementById("cd0").style= "border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;"; 
+  }
+  
+}
+
